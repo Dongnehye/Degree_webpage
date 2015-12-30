@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Humidity List Page</title>
+</head>
+<body>
+	<h1>Humidity List Page</h1>
+		<a href="/">main</a>
+		<a href="/degree">degree</a>
+		<a href="/opt">opt</a>
+	<hr />
+	<table width= "100%" border ="1">
+		<tr>
+			<th>time</th>
+			<th>humidity</th>
+		</tr>
+		<% data.forEach(function (item, index) {	%>
+		<% var now = item.time;
+		var nowAll = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate() + " " + 
+	now.getHours() + ":" +now.getMinutes() + ":" + now.getSeconds() + " ";
+		 %>
+		<tr>
+			<td><%= nowAll %></td>
+			<td><%= item.humidity_num %></td>
+		</tr>
+		<% }); %>
+	<table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Degree List Page</title>
+</head>
+<body>
+	<h1>Degree List Page</h1>		
+		<a href="/">main</a>
+		<a href="/humidity">humidity</a>
+		<a href="/degree">degree</a>
+	<hr />
+		 <table width= "100%" border ="1">
+		<tr>
+			<th>time</th>
+			<th>opt_degree_num</th>
+		</tr>
+		<% data.forEach(function (item, index) {	%>
+		<% var now = item.time %>
+		<tr>
+			<td>t<%= now %></td>
+			<td>d<%= item.opt_degree_num %></td>
+		</tr>
+		<% }); %>
+	<table>
+</body>
+</html>
